@@ -1,0 +1,103 @@
+body {
+  background-image: url("greybackground.jpeg");
+  font-family: arial;
+}
+.text{
+  width: 80%;
+  height: 70%;
+  top:25%;
+  left:40px;
+  position: absolute;
+  color: #fff;
+
+}
+.small-text{
+  width:50%;
+  float:left;
+  background: #222;
+
+}
+.small-text h1{
+font-size: 30px;
+width: 640px;
+position: relative;
+margin-left: 40px;
+
+}
+.small-text p{
+  font-size: 20px;
+  width: 640px;
+  position: relative;
+  margin-left: 40px;
+}
+.intro{
+  height:768;
+  width:1024;
+  background-image: ("IMG_2455.jpeg")
+
+}
+.social{
+  border-radius: 10px;
+  padding-left: : 25px;
+  margin: 5px;
+
+}
+.logo{
+  float: left;
+  margin-left: 10px;
+}
+.container {
+width: 80%;
+}
+header {
+  background: black;
+}
+header::after {
+  content:'';
+  display: table;
+  clear: both;
+}
+nav{
+  float: right;
+}
+nav ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li{
+  display: inline-block;
+  margin-left: 70px;
+  margin-top: 35px;
+
+  position: relative;
+}
+nav a{
+  color: red;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+nav a:hover{
+  color: red;
+}
+nav a::before{
+  content: '';
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  width: 0%
+}
+nav a:hover::before{
+  width: 100%;
+}
+
+footer{
+  background:#222;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4rem;
+}

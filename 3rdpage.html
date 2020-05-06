@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+<title> Contact </title>
+  </head>
+  <link href= "main.css" rel= "stylesheet" />
+
+  <body>
+    <header>
+      <div class="container">
+        <img src="bsbllogo.png" height="100" width="125" alt="logo" class="logo">
+        <nav>
+
+          <ul>
+            <li><a href="myfirst.html">Home</a></li>
+              <li><a href="page2.html">Services</a></li>
+                <li><a href="3rdpage.html">Contact</a></li>
+        </nav>
+      </div>
+    </header>
+    <div class="text">
+      <div class="small-text">
+        <h1> Contact via Instagram <br> or Twitter and send <br> direct message
+        to receive <br> pricing and hours.</h1>
+          <p> Payment can be in cash<br> or any form of virtual
+          currency <br> ex. Venmo, Cashapp etc</p>
+        </div>
+        </div>
+        <img src="IMG_2455.jpeg" alt="JUCO" style="float:right;width:600px;height:400px; margin:60px;">
+
+        <div id="wrapper">
+           <button id="location-button">Get User Location</button>
+           <div id="output"></div>
+         </div>
+        <script>
+        $('#location-button').click(function(){
+
+               if (navigator.geolocation) {
+                   navigator.geolocation.getCurrentPosition(function(position){
+                     console.log(position);
+                     $.get( "http://maps.googleapis.com/maps/api/geocode/json?latlng="+ position.coords.latitude + "," + position.coords.longitude +"&sensor=false", function(data) {
+                       console.log(data);
+                     })
+                     var img = new Image();
+                     img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + position.coords.latitude + "," + position.coords.longitude + "&zoom=13&size=800x400&sensor=false";
+                     $('#output').html(img);
+                   });
+
+               }
+             });
+</script>
+
+  </body>
+  <footer>
+    <a href= "https://twitter.com/mgarv1">
+    <img src="twitter.png" width="50" height="50" align="center" alt="social" class="social">
+  </a>
+  <a href="https://www.instagram.com/michael_garverick/?hl=en">
+    <img src="instagram.jpeg" width="50" height="50" align="center" alt="social" class="social">
+  </a>
+  </footer>
+</html>
